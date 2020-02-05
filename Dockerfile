@@ -1,3 +1,3 @@
 FROM nginx
-COPY . /var/www
-COPY nginx.conf /etc/nginx/nginx.conf 
+COPY ./static /var/www
+COPY nginx.conf /etc/nginx/nginx.conf
