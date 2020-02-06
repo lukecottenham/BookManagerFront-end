@@ -16,12 +16,12 @@ pipeline {
         }
         stage('--test-deploy--') {
             steps {
-            	sh "ssh -T -i /home/jenkins/Project.pem ubuntu@ec2-3-11-81-76.eu-west-2.compute.amazonaws.com ./docker-front-end.sh"
+            	sh "ssh -T -i /home/jenkins/Project.pem ubuntu@ec2-3-8-20-166.eu-west-2.compute.amazonaws.com ./docker-front-end.sh"
             }
         }
         stage('--live-deploy--') {
         	steps {
-        		sh "ssh -T -i /home/jenkins/Project.pem ubuntu@ec2-35-177-203-248.eu-west-2.compute.amazonaws.com ./docker-front-end.sh"
+        		sh "ssh -T -i /home/jenkins/Project.pem ubuntu@ec2-318-130-222-86.eu-west-2.compute.amazonaws.com ./docker-front-end.sh"
         	}
         }
     }
