@@ -3,14 +3,14 @@ pipeline {
     stages {
         stage('--docker-build--') {
         	steps {
-        		sh "docker build -t lukecottenham/book-front-end:$BUILD_NUMBER -t lukecottenham/book-front-end:latest ."
+        		sh "docker build -t lukecottenham/book-front-end-master:$BUILD_NUMBER -t lukecottenham/book-front-end-master:latest ."
         	}
         }
         stage('--dockerhub-push--') {
         	steps {
         		withDockerRegistry([ credentialsId: "luke-docker", url: "" ]) {
-        			sh "docker push lukecottenham/book-front-end:$BUILD_NUMBER"
-        			sh "docker push lukecottenham/book-front-end:latest"
+        			sh "docker push lukecottenham/book-front-end-master:$BUILD_NUMBER"
+        			sh "docker push lukecottenham/book-front-end-master:latest"
         		}
         	}
         }
