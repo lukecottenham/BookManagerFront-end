@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('--docker-build--') {
         	steps {
-        		sh "docker build -t lukecottenham/book-front-end-master:$BUILD_NUMBER -t lukecottenham/book-front-end-master:latest -f DockerfileMaster."
+        		sh "docker build -t lukecottenham/book-front-end-master:$BUILD_NUMBER -t lukecottenham/book-front-end-master:latest -f DockerfileMaster ."
         	}
         }
         stage('--dockerhub-push--') {
