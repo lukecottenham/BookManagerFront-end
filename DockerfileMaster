@@ -1,0 +1,3 @@
+FROM nginx
+COPY ./static /var/www
+COPY nginxMaster.conf /etc/nginx/nginx.conf
