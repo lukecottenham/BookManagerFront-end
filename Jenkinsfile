@@ -21,7 +21,7 @@ pipeline {
         }
         stage('--live-deploy--') {
         	steps {
-        		sh "ssh -T -i /home/jenkins/Project.pem ubuntu@ec2-318-130-222-86.eu-west-2.compute.amazonaws.com ./docker-front-end.sh"
+        		sh "ssh -T -i /home/jenkins/Project.pem ubuntu@ec2-18-130-222-86.eu-west-2.compute.amazonaws.com ./docker-front-end.sh"
         	}
         }
     }
