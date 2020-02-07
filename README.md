@@ -10,6 +10,10 @@
      
 [Security](#Security)
 
+[Step-by-step Walkthrough](#walkthrough)
+
+[Testing](#testing)
+
 [Future Improvements](#FutureImprovements)
 
 ### Problem
@@ -17,9 +21,9 @@ To create a fully-deployed version of a full-stack OOP application, with utilisa
 
 
 ### Solution
-We created a fully-developed full stack application that utilised technologies and tools that made this implementation possible. These included the use of git as a VCS, Jenkins for a CI server, Nexus as an artifact repository and AWS for the development and testing environments.
+We created a fully-developed full stack application that utilised technologies and tools that made this implementation possible. These included the use of git as a VCS, Jenkins for a CI server, Nexus as an artifact repository and AWS for the testing and live environments.
 
-![FE](indexActual.png)
+![Homepage Image](indexActual.png)
 ### Deployment
 
 #### Source Code
@@ -54,6 +58,31 @@ AWS was used for our MySQL database using the RDS service, our testing and produ
 
 ### Security
 The security that we used in our project include the use of passwords and multi factor authentication to gain access to the database and instances. We used IAM roles for database access. We also used security groups to protect against unauthorised access to the EC2 instances.
+![Security Image](security.png)  
+![Network Image](networking.png)  
+  
+
+
+### Step-by-step Walkthrough
++ Set up accounts for technologies used
+  + Nexus Repository
+  + Docker Hub
+  + Jenkins
+  + Trello
+  + AWS
+  + Git
++ Create user stories on Trello to track project
++ Place project on VCS
++ Set up Jenkins to track desired branch from Git
++ Configure project pom to submit snapshot to Nexus on deployment with Maven
++ Use Jenkinsfile to configure automated pipeline to package, test and deploy the application and build a docker image which is pushed to Docker Hub as a back-up of previous versions
++ Set-up EC2 instances for testing and live stages as well as seperate instances for the front and back end. Use AWS RDS to create and launch a MySQL database to be used by the application. Use principle of least privilege to restrict access, use IAM roles for connection to the database, create security groups for increased security.
+
+### Testing 
+In our project we used multiple testing tools to test the project as it woved through the pipeline. This included JUnit, Selenium and Sonarqube.   
+
+![FE](SonarqubeReport.png)  
+  
 
 ### Future Improvements
 In the future we would like to implement tokenisation to avoid using root credentials in order to access the database. 
