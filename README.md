@@ -19,7 +19,7 @@ To create a fully-deployed version of a full-stack OOP application, with utilisa
 ### Solution
 We created a fully-developed full stack application that utilised technologies and tools that made this implementation possible. These included the use of git as a VCS, Jenkins for a CI server, Nexus as an artifact repository and AWS for the development and testing environments.
 
-![FE](indexActual.png)
+![FE](IndexActual.png)
 ### Deployment
 
 #### Source Code
