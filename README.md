@@ -23,7 +23,7 @@ To create a fully-deployed version of a full-stack OOP application, with utilisa
 ### Solution
 We created a fully-developed full stack application that utilised technologies and tools that made this implementation possible. These included the use of git as a VCS, Jenkins for a CI server, Nexus as an artifact repository and AWS for the testing and live environments.
 
-![Homepage Image](indexActual.png)
+![Homepage Image](IndexActual.png)
 ### Deployment
 
 #### Source Code
@@ -57,8 +57,14 @@ AWS was used for our MySQL database using the RDS service, our testing and produ
 [For more information on AWS](https://docs.aws.amazon.com/)
 
 ### Security
-The security that we used in our project include the use of passwords and multi factor authentication to gain access to the database and instances. We used IAM roles for database access. We also used security groups to protect against unauthorised access to the EC2 instances.
-![Security Image](security.png)  
+The security that we used in our project include the use of passwords and multi factor authentication to gain access to the database and instances. We used IAM roles for database access. We also used security groups to protect against unauthorised access to the EC2 instances.  
+  
+  
+![Security Image](security.png)
+
+  
+    
+
 ![Network Image](networking.png)  
   
 
